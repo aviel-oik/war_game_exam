@@ -4,13 +4,13 @@ import random
 def create_card(rank:str,suite:str) -> dict:
     value = 0
     # if rank is letter
-    if (rank == "J"):
+    if rank == "J":
         value = 11
-    elif (rank == "Q"):
+    elif rank == "Q":
         value = 12
-    elif (rank == "K"):
+    elif rank == "K":
         value = 13
-    elif (rank == "A"):
+    elif rank == "A":
         value = 14
     # if rank is number
     else:
@@ -34,9 +34,8 @@ def compare_cards(p1_card:dict, p2_card:dict) -> str:
         return "WAR"
     elif p1_card["value"] > p2_card["value"]:
         return "p1"
-    elif p1_card["value"] < p2_card["value"]:
+    else:
         return "p2"
-
 
 
 def create_deck() -> list[dict]:
